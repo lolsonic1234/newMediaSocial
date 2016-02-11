@@ -1,0 +1,48 @@
+body {
+    background-color: #737373;
+}
+
+.submit {
+    font-size: 25px;
+    font-family: fantasy;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.popUp {
+    font-size: 15px;
+    font-family: fantasy;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.popUpDiv {
+    position: absolute;
+    left: 5%;
+    max-width: 90%;
+    min-width: 90%;
+    background-color: gray;
+    font-size: 15px;
+    font-family: fantasy;
+    border-radius: 10px;
+    box-shadow: 5px 5px black, 2px 2px black, 3px 3px black, 4px 4px black, 1px 1px black;
+}
+
+.poppUp {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    word-spacing: 6px;
+    font-family: Impact;
+}
+
+.inputInfoBar {
+    text-align: center;
+}
+
+.inpu {
+    box-shadow: 2px 2px black;
+}
+
+#error {
+    color: red;
+}
