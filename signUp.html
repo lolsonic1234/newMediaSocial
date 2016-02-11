@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>MeetAndChan</title>
+    <link rel="stylesheet" type="text/css" href="signUp.css">
+    <script src="jquery150.js"></script>
+  </head>
+
+    
+  <body>
+      
+      <div class="inputInfoBar">
+        <h1>Complete the form then press the submit Button.</h1>
+        <h3>Username: <input type="text" class="inpu" id="username"/></h3><br>
+        <h3>Password: <input type="password" class="inpu" id="password"/></h3><br>
+        <h3>Confirm Password: <input type="password" class="inpu" id="confirmPassword"/></h3><br>
+        <h3>Age: <input type="number" class="inpu" id="age"/></h3><br>
+        <input type="submit" class="popUp" value="Click here for Rules and stuff" onclick="rulesOpen()"><br>
+          <br>
+          <div style="display: none;" class="popUpDiv">
+              <h3 class="poppUp">These are the rules! (oh noo rules...)</h3><br>
+              <h3 class="poppUp">Dont spam anything on here. You will probably be stuck here forever if you do.</h3><br>
+              <h3 class="poppUp">If nothings working, just wait, a team of highly trained chipmunks and monkeys will fix it.</h3>
+              <input type="submit" class="submit" value="Click here if you understand." onclick="rulesClose()">
+          </div>
+        <input type="submit" class="submit" value="Sign Up" onclick="signUp()">
+      </div>
+      
+      <h3 id="error" class="1"></h3>
+      <h3 id="error" class="2"></h3>
+      <h3 id="error" class="3"></h3>
+      <h3 id="error" class="4"></h3>
+      
+    <script src="jquery1102.js">
+    </script>
+    <script src="jquery1114.js">
+    </script>
+      
+      
+    <script src="signUp.js"></script>
+  </body>
+</html>
