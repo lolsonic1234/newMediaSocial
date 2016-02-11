@@ -31,7 +31,7 @@ function signUp(){
     age = $('#age').val();
     
     if(agreed == 1){
-        if(userName.length > 5 && userName.length < 12 && age > 13 && Password.length > 5 && ConfirmPassword == Password){
+        if(userName.length > 5 && userName.length < 13 && age > 13 && Password.length > 5 && ConfirmPassword == Password){
             alert("Still working on this. Please be patient anyone reading this! Also, hello " + userName + " how are ya? Your password is " + Password + " and your confirm password is " + ConfirmPassword + " finally, your age is " + age);
             user.set("username", userName);
             user.set("password", Password);
