@@ -1,0 +1,54 @@
+body {
+    background-color: #737373;
+}
+
+.LS{
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: right;
+    float: right;
+    margin-right: 4%;
+    font-family: monospace;
+    background-color: #595959;
+    letter-spacing: 4px;
+    border-radius: 3px;
+    box-shadow: 5px 5px black, 2px 2px black, 3px 3px black, 4px 4px black, 1px 1px black;
+}
+
+.logo{
+    position: absolute;
+    height: 50px;
+    top: 1%;
+}
+
+.mic {
+    position: absolute;
+    top: 1%;
+    margin-left: 70px;
+}
+
+.updateLog{
+    position: absolute;
+    top: 25%;
+    font-family: sans-serif;
+    left: 5%;
+    background-color: #595959;
+    max-width: 90%;
+    min-width: 90%;
+    border-style: solid;
+    border-color: #0F0F0F;
+    border-width: 5px;
+    overflow-y: auto;
+    min-height: 50%;
+    max-height: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 5px black, 2px 2px black, 3px 3px black, 4px 4px black, 1px 1px;
+}
+
+.UpdateLogTi{
+    text-align: center;
+    font-family: fantasy;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
