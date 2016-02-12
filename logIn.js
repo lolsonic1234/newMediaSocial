@@ -35,7 +35,8 @@ function clickThis(){
         $('.logedInDiv').css("display", "block");
         $('#userNaMe').html(kgmfFFtY)
         alert('welcome');
-        updater = setInterval(updateStatuses, 2500);
+        alert('Do me a favor. When posting a status, wait for 4 seconds and it will appear. If you spam it, no one will be able to use the website. By the way I have the power to see who spammed it. I hooked my website with the power of seeing who spammed my website.');
+        updater = setInterval(updateStatuses, 4000);
     }else {
         alert("go away.")
     }
