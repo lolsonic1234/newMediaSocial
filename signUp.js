@@ -1,8 +1,8 @@
 Parse.initialize("SLgQi40ZWuXta0IwBzaKNxSVE2vUQveZRQHgREaw", "lVYH1g2UpO9PokeMDrxCBv4gZdqEkWIfSShdesE7");
 
 
-var user = new Parse.User();
 
+var acountMade = 0;
 
 var agreed = 0;
 
@@ -25,6 +25,11 @@ function rulesClose(){
 }
 
 function signUp(){
+    
+    if(acountMade == 1){
+        window.location = "http://127.0.0.1:52999/MeetInChan/logIn.html"
+    }
+    
     userName = $('#username').val();
     Password = $('#password').val();
     ConfirmPassword = $('#confirmPassword').val();
@@ -33,9 +38,18 @@ function signUp(){
     if(agreed == 1){
         if(userName.length > 5 && userName.length < 13 && age > 13 && Password.length > 5 && ConfirmPassword == Password){
             alert("Still working on this. Please be patient anyone reading this! Also, hello " + userName + " how are ya? Your password is " + Password + " and your confirm password is " + ConfirmPassword + " finally, your age is " + age);
-            user.set("username", userName);
-            user.set("password", Password);
-            user.set("age", age);
+            
+            var saveInfo = {userName, Password, age};
+            var saveFiles = Parse.Object.extend("Usernames");
+            var saveFiles = new saveFiles();
+            saveFiles.save(saveInfo).then(function(object){
+                $('#idPl').html("Your ID is " + saveFiles.id + " do not forget it. You will need it to log in. It exists to protect your account.");
+                acountMade = 1;
+                agreed = 0;
+                $('.submit').val("Log In");
+            })
+            
+            
         }
 
         if(Password.length < 6){
