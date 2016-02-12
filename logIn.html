@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>MeetAndChan</title>
+    <link rel="stylesheet" type="text/css" href="signUp.css">
+    <script src="jquery150.js"></script>
+  </head>
+
+    
+  <body>
+      
+      <div class="inputInfoBar" style="display: block;">
+        <h1>Comeplete the form then press log in to log in.</h1>
+        <h3>Username: <input type="text" class="inpu" id="user"/></h3><br>
+        <h3>Password: <input type="password" class="inpu" id="pass"/></h3><br>
+          <h3>ID: <input type="password" class="inpu" id="iden"/></h3><br>
+        <input type="submit" class="submit" value="Log In" onclick="clickThis()">
+      </div>
+      
+      <div class="logedInDiv" style="display: none;">
+          <div class="TopBar">
+              <input type="submit" class="submit" value="Sign Out" style="position: absolute; top: 1%;">
+              <h1 class="topperBar" style="right: 1%; position: absolute; top: -2%;" id="userNaMe"></h1>
+          </div>
+          <div class="sideBar" style="position: absolute; top: 15%; background-color: gray; width: 15%; height: 75%; border-style: solid;">
+              <h4>Games coming soon.</h4>
+          </div>
+          <div class="middleBar" style="position: absolute; top: 15%; left: 20%; background-color: gray; width: 75%; height: 55%; border-style: solid; overflow-y: auto;">
+          </div>
+          <div class="typeBar" style="position: absolute; top: 70%; left: 20%; background-color: gray; width: 75%; height: 20%; border-style: solid; overflow-y: auto; overflow-x: hidden;">
+              <textarea class="submitStatus" style="left: -4px;;position: absolute; bottom: 0; width: 100%; overflow-x: auto; height: 50%; border-style: solid; max-height: 50%; max-width: 100%; border-color: black; border-width: 2px;"></textarea>
+          </div>
+          <input type="submit" class="submit" value="Submit Status" style='position: absolute; top: 90.8%; left: 20%' onclick="submitStatus()">
+          
+      </div>
+      
+    <script src="jquery1102.js">
+    </script>
+    <script src="jquery1114.js">
+    </script>
+      
+      
+    <script src="logIn.js"></script>
+  </body>
+</html>
