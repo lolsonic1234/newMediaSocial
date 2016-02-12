@@ -35,7 +35,7 @@ function clickThis(){
         $('.logedInDiv').css("display", "block");
         $('#userNaMe').html(kgmfFFtY)
         alert('welcome');
-        updater = setInterval(updateStatuses, 50);
+        updater = setInterval(updateStatuses, 2500);
     }else {
         alert("go away.")
     }
