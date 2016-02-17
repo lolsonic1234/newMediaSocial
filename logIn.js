@@ -25,6 +25,8 @@ function currentTime(){
     if(seconds < 10){
         seconds = "0" + new Date().getSeconds();
     }
+    
+    alert(year, day, hours, minutes, seconds)
 }
 
 
