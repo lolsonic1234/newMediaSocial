@@ -100,7 +100,7 @@ function updateStatuses(){
     var GameScore = Parse.Object.extend("statusEs");
     var query = new Parse.Query(GameScore);
     
-    query.descending("currentDate");
+    query.descending("createdAt");
     
     query.notEqualTo("kgmfFFtY", "1777777777877694");
     query.find({
