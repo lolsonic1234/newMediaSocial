@@ -4,17 +4,35 @@ var p1332ddfd = "";
 var kgmfFFtY = "";
 
 var year = new Date().getFullYear();
+var month = new Date().getMonth() + 1;
 var day = new Date().getDate();
 var hours = new Date().getHours();
 var minutes = new Date().getMinutes();
 var seconds = new Date().getSeconds();
+var currentDate = year + "" + month + "" + day + "" + hours + "" + minutes + "" + seconds;
+var currentDateStylish = "Year(" + year + ")- Day(" + day + ")- Month(" + month + ") - Time(" + hours + ":" + minutes + ":" + seconds + " )";
 
 
-setInterval(currentTime(), 1000)
+
+var updater = setInterval(updateStatuses, 2000);
+clearInterval(updater);
+
+logIn();
+currentTime();
 
 
 function currentTime(){
+    year = new Date().getFullYear();
+    month = new Date().getMonth() + 1;
+    day = new Date().getDate();
+    hours = new Date().getHours();
+    minutes = new Date().getMinutes();
+    seconds = new Date().getSeconds();
     if(hours < 10){
+        hours = "0" + new Date().getHours() + 1;
+    }
+    
+    if(month < 10){
         hours = "0" + new Date().getHours();
     }
     
@@ -26,14 +44,12 @@ function currentTime(){
         seconds = "0" + new Date().getSeconds();
     }
     
-    alert(year, day, hours, minutes, seconds)
+    currentDate = year + "" + month + "" + day + "" + hours + "" + minutes + "" + seconds;
+    
+    window.setTimeout(function(){
+        currentTime();
+    }, 1000);
 }
-
-
-var updater = setInterval(updateStatuses, 2000);
-clearInterval(updater);
-
-logIn();
 
 
 function logIn(){
@@ -72,7 +88,7 @@ function clickThis(){
 function submitStatus(){
     var status = $('.submitStatus').val();
     $('.submitStatus').val("");
-    var saveInfo = {kgmfFFtY, status};
+    var saveInfo = {kgmfFFtY, status, currentDate, currentDateStylish};
         var saveFiles = Parse.Object.extend("statusEs");
         var saveFiles = new saveFiles();
         saveFiles.save(saveInfo).then(function(object){
@@ -84,7 +100,7 @@ function updateStatuses(){
     var GameScore = Parse.Object.extend("statusEs");
     var query = new Parse.Query(GameScore);
     
-    query.descending("kgmfFFtY");
+    query.descending("currentDate");
     
     query.notEqualTo("kgmfFFtY", "1777777777877694");
     query.find({
@@ -93,8 +109,7 @@ function updateStatuses(){
         // Do something with the returned Parse.Object values
             for (var i = 0; i < results.length; i++) {
               var object = results[i];
-              alert(object.get("kgmfFFtY"))
-              $(".middleBar").append("<div class='temp' style='background-color: darkgray; border-radius: 10px;'><h1 class='poster' style='font-size: 25px; text-align: center;'>" + object.get("kgmfFFtY") +"</h1><h4 class='posted' style='margin-left: 5px;'>" + object.get("status") + "</h4></div>");
+              $(".middleBar").append("<div class='temp' style='background-color: darkgray; border-radius: 10px;'><h1 class='poster' style='font-size: 25px; text-align: center;'>" + object.get("kgmfFFtY") +"</h1><h4 class='posted' style='margin-left: 5px;'>" + object.get("status") + "</h4><h4>Time Posted: " + object.get("currentDateStylish") + "</h4></div>");
             }
       },
       error: function(error) {
