@@ -27,7 +27,7 @@ function rulesClose(){
 function signUp(){
     
     if(acountMade == 1){
-        window.location = "http://lolsonic1234.github.io/newMediaSocial/logIn.html"
+        window.location = "http://127.0.0.1:52999/MeetInChan/logIn.html"
     }
     
     userName = $('#username').val();
