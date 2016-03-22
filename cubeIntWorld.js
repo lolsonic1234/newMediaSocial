@@ -98,10 +98,7 @@ $(".buyCubeLimit").click(function(){
 $(".resetti").click(function(){
     $('.cubeSpawnLocation #moneyMake').remove();
     
-    $('.firstTimePlaying').css({
-        zIndex: "9",
-        opacity: ".9"
-    });
+    
     nameLimitere = setInterval(nameLimiter, 10);
     document.cookie = "cash=0";
     document.cookie = "cubespawnin=1000";
