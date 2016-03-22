@@ -86,7 +86,6 @@ $(".buyCubeLimit").click(function(){
     
     
     if(parseInt($(".maxCubeinput").val()) !== 0 && chaCHING >= thirdBase){
-        alert(thirdBase);
         maxCube += parseInt($(".maxCubeinput").val());
         chaCHING -= thirdBase;
     }
