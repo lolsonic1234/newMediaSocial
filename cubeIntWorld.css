@@ -222,6 +222,26 @@ p {
     color: whitesmoke;
 }
 
+.resetti {
+    position: absolute;
+    height: 10vw;
+    width: 31vw;
+    background-color: red;
+    margin-top: 29.5vw;
+    left: .5vw;
+    border-radius: 5px;
+}
+
+.resetText {
+    position: absolute;
+    font-size: 5vw;
+    margin: auto;
+    padding-left: 8vw;
+    padding-top: 1.5vw;
+    font-family: "Arial Black";
+    color: whitesmoke;
+}
+
 .cubeLimitScreen {
     transition: opacity 1s;
     position: absolute;
