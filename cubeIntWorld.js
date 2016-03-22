@@ -1,6 +1,5 @@
 console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this!")
 
-
 var moneyFUN = setInterval(dynamicCollected, 1000);
 var moneyCurrent = setInterval(changeMoney, 100);
 var nameLimitere = setInterval(nameLimiter, 10);
@@ -87,10 +86,69 @@ $(".buyCubeLimit").click(function(){
     
     
     if(parseInt($(".maxCubeinput").val()) !== 0 && chaCHING >= thirdBase){
+        alert(thirdBase);
         maxCube += parseInt($(".maxCubeinput").val());
         chaCHING -= thirdBase;
     }
 })
+
+
+
+
+$(".resetti").click(function(){
+    $('.cubeSpawnLocation #moneyMake').remove();
+    
+    $('.firstTimePlaying').css({
+        zIndex: "9",
+        opacity: ".9"
+    });
+    nameLimitere = setInterval(nameLimiter, 10);
+    document.cookie = "cash=0";
+    document.cookie = "cubespawnin=1000";
+    document.cookie = "cubeSkinBought=1";
+    document.cookie = "userName=";
+    document.cookie = "firstTime=0";
+    document.cookie = "cubeColor=blue";
+    document.cookie = "maxCubies=5";
+    document.cookie = "firstBought=0";
+    document.cookie = "secondBought=0";
+    document.cookie = "thirdBought=0";
+    document.cookie = "fourthBought=0";
+    document.cookie = "stageLevel=1";
+    chaCHING = readCookie('cash');
+    cubeSpawnSpeed = readCookie('cubespawnin');
+    cubesBought = readCookie('cubeSkinBought');
+    playerName = readCookie('userName');
+    cubeColor = readCookie('cubeColor');
+    maxCube = readCookie('maxCubies');
+    fBought = readCookie('firstBought');
+    sBought = readCookie('secondBought');
+    tBought = readCookie('thirdBought');
+    foBought = readCookie('fourthBought');
+    level = readCookie('stageLevel');
+    cubeSpawnSpeed -= 1000;
+    cubeSpawnSpeed += 1000;
+    chaCHING -= 1;
+    chaCHING += 1;
+    level -= 1;
+    level += 1;
+    cubesBought -= 1;
+    cubesBought += 1;
+    fBought -= 1;
+    fBought += 1;
+    sBought -= 1;
+    sBought += 1;
+    tBought -= 1;
+    tBought += 1;
+    foBought -= 1;
+    foBought += 1;
+    maxCube -= 1;
+    maxCube += 1;
+    
+    currentCube = 0;
+});
+
+
 
 
 if(readCookie('firstTime') > 1){
@@ -199,6 +257,7 @@ if(readCookie('firstTime') < 1){
     foBought += 1;
     maxCube -= 1;
     maxCube += 1;
+    currentCube = 0;
 };
 
 $('.submitName').click(function(){
