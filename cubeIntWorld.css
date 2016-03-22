@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=Syncopate:700);
+
+.title {
+    text-align: center;
+    font-family: "Syncopate";
+    font-size: 3vw;
+}
+
+.name {
+    position: absolute;
+    font-size: 2.5vw;
+    right: 1vw;
+    top: 1%;
+}
+
+.money {
+    font-size: 2.5vw;
+    position: absolute;
+    top: 1%;
+}
+
+.fancyNumSe {
+    position: absolute;
+    top: 1.2vw;
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: blue;
+    transition: transform 1.5s;
+    left: 22vw;
+}
+
+p {
+    position: absolute;
+    margin-top: 15%;
+    border: auto;
+}
+
+.cubeSpawnLocation {
+    background-color: rgb(179, 230, 255);
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+}
+
+.moneyFa {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.9vw;
+    margin-top: 25%;
+}
+
+.moreCubesShop {
+    position: absolute;
+    width: 22vw;
+    height: 40vw;
+    left: 42vw;
+    background-color: rgb(179, 230, 255);
+}
+
+.storeItem1 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: blue;
+    left: .5vw;
+    top: .5vw;
+}
+
+.itemInfo1 {
+    position: absolute;
+    left: 6vw;
+    top: .5vw;
+    font-size: 1.5vw;
+}
+
+.storeItem2 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: blue;
+    left: .5vw;
+    top: 5vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.itemInfo2 {
+    position: absolute;
+    left: 6vw;
+    top: 5vw;
+    font-size: 1.5vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.storeItem3 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: blue;
+    left: .5vw;
+    top: 9.5vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.itemInfo3 {
+    position: absolute;
+    left: 6vw;
+    top: 9.5vw;
+    font-size: 1.5vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.storeItem4 {
+    position: absolute;
+    width: 4vw;
+    height: 4vw;
+    background-color: blue;
+    left: .5vw;
+    top: 13.9vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.itemInfo4 {
+    position: absolute;
+    left: 6vw;
+    top: 13.9vw;
+    font-size: 1.5vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.notEnough {
+    transition: opacity 1s;
+    position: absolute;
+    z-index: -1;
+    background-color: gray;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.tnot {
+    position: absolute;
+    font-size: 5vw;
+    top: 20vws;
+    left: 20%;
+}
+
+.firstTimePlaying {
+    transition: opacity 1s;
+    position: absolute;
+    z-index: -1;
+    background-color: gray;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.EnterName {
+    position: absolute;
+    font-size: 5vw;
+    top: 5vw;
+    left: 20%;
+}
+
+.extrasShop {
+    position: absolute;
+    width: 34vw;
+    height: 40vw;
+    left: 65vw;
+    background-color: rgb(179, 230, 255);
+}
+
+.inputName {
+    position: absolute;
+    width: 50vw;
+    height: 5vw;
+    top: 20vw;
+    left: 23%;
+    font-size: 5vw;
+    text-align: center;
+}
+
+.submitName {
+    position: absolute;
+    width: 50.6vw;
+    height: 5vw;
+    top: 27vw;
+    left: 23%;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.increaseMaxCube {
+    position: absolute;
+    height: 10vw;
+    width: 31vw;
+    background-color: blue;
+    margin-top: 4.9vw;
+    left: .5vw;
+    border-radius: 5px;
+}
+
+.cubeMaxText {
+    position: absolute;
+    font-size: 2.4vw;
+    margin: auto;
+    padding-left: 1.8vw;
+    padding-top: 3vw;
+    font-family: "Arial Black";
+    color: whitesmoke;
+}
+
+.cubeLimitScreen {
+    transition: opacity 1s;
+    position: absolute;
+    z-index: -1;
+    background-color: gray;
+    left: 0;
+    top: 0;
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.maxCubes {
+    position: absolute;
+    float: left;
+    font-size: 3vw;
+    margin-top: 15vw;
+    margin-left: 15vw;
+}
+
+#fancyMaxCube{
+    position: absolute;
+    width: 4.5vw;
+    height: 4.5vw;
+    background-color: blue;
+    transition: transform 1.5s;
+    margin-top: 13.5vw;
+    margin-left: 9.5vw;
+    color: white;
+    font-size: 2.5vw;
+    font-family: arial;
+}
+
+.maxCubeinput {
+    font-size: 2vw;
+    width: 5vw;
+    border-style: solid;
+    margin-top: 22vw;
+    margin-left: 30.99vw;
+}
+
+.icmc {
+    position: absolute;
+    margin-top: 22.2vw;
+    margin-left: 10.8vw;
+    font-size: 2vw;
+}
+
+.estimatePrice {
+    position: absolute;
+    margin-left: 10.8vw;
+    font-size: 2vw;
+}
+
+.aas {
+    position: absolute;
+    margin-left: 26vw;
+    font-size: 2vw;
+}
+
+.buyCubeLimit {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 7vw;
+    height: 4vw;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 45vw;
+    margin-top: -7vw;
+}
+
+.buyButton {
+    position: absolute;
+    font-size: 2.6vw;
+    margin: auto;
+    padding-left: 1vw;
+    padding-top: .5vw;
+}
+
+.closeCubeLimit {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 8.2vw;
+    height: 4vw;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 45vw;
+    margin-top: -1vw;
+}
+
+.closeButton {
+    position: absolute;
+    font-size: 2.6vw;
+    margin: auto;
+    padding-left: 1vw;
+    padding-top: .5vw;
+}
