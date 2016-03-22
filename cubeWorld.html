@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Cubeint</title>
+    <link rel="stylesheet" type="text/css" href="cubeIntWorld.css">
+    <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+  </head>
+
+    
+  <body style="overflow: hidden">
+      
+    <div class="firstTimePlaying">
+        <h1 class="EnterName" name="name">What is your name player?</h1>
+        <input type="text" class="inputName"/>
+        <input type="submit" class="submitName" value="Play"/>
+    </div>
+      
+    <div class="cubeLimitScreen">
+        <h1 class="maxCubes">Max Cubes: </h1>
+        
+        <div id="fancyMaxCube" class="fancyNumSe">
+            <p id="numMC">5</p>
+        </div>
+        
+        <h1 class="icmc">Increase max cubes by: </h1>
+        <input type="number" class="maxCubeinput">
+        
+        <h1 class="estimatePrice">Estimate price is:  <h1 class="aas">0</h1></h1>
+
+        <div class="buyCubeLimit">
+            <h1 class="buyButton">Buy</h1>
+        </div>
+        
+        <div class="closeCubeLimit">
+            <h1 class="closeButton">Close</h1>
+        </div>
+    </div>
+      
+    <div class="notEnough">
+        <h1 class="tnot">You dont have enough cubes!</h1>
+    </div>
+      
+    <div class="theGame">
+            
+            
+        <div class="topBar">
+            <h1 class="name">Emptyname</h1>
+            <h1 class="title">CubeInt 2.0</h1>
+            <h1 class="money">Cubes Collected: </h1>
+        </div>
+        <div class="fancyNumSe">
+            <p class="moneyFa">0</p>
+        </div>
+        
+        <div class="cubeSpawnLocation">
+        </div>
+        
+        <div class="moreCubesShop">
+            <img src="http://i.imgur.com/t1dSFNJ.png" class="storeItem1">
+            <h2 class="itemInfo1">Deal With it: 25 cubes</h2>
+            <img src="http://i.imgur.com/Cx97lRg.png" class="storeItem2">
+            <h2 class="itemInfo2">Ghost: 100 cubes</h2>
+            <img src="http://i.imgur.com/puPQnJe.png" class="storeItem3">
+            <h2 class="itemInfo3">Epic Face: 500 cubes</h2>
+            <img src="http://i.imgur.com/I1qZd7t.png" class="storeItem4">
+            <h2 class="itemInfo4">Mustache: 1K cubes</h2>
+        </div>
+        <div class="extrasShop">
+            <div class="colorChanger" style="background-color: blue; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: .5vw;"></div>
+            <div class="colorChanger" style="background-color: red; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 5vw;"></div>
+            <div class="colorChanger" style="background-color: green; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 9.5vw;"></div>
+            <div class="colorChanger" style="background-color: goldenrod; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 14vw;"></div>
+            <div class="colorChanger" style="background-color: purple; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 18.5vw;"></div>
+            <div class="colorChanger" style="background-color: orange; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 23vw;"></div>
+            <div class="colorChanger" style="background-color: gray; width: 4vw; height: 4vw; position: absolute; top: .5vw; left: 27.5vw;"></div>
+            
+            <div class="increaseMaxCube">
+                <h1 class="cubeMaxText">Increase Cube Limit</h1>
+            </div>
+        </div>
+    </div>
+    
+      
+      
+    </div>
+    <script src="//code.jquery.com/jquery-1.10.2.js">
+    </script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js">
+    </script>
+    <script src="cubeIntWorld.js"></script>
+  </body>
+</html>
