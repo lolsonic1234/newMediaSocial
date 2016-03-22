@@ -146,6 +146,7 @@ $(".resetti").click(function(){
     maxCube += 1;
     
     currentCube = 0;
+    location.reload();
 });
 
 
