@@ -1,3 +1,6 @@
+console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this!")
+
+
 var moneyFUN = setInterval(dynamicCollected, 1000);
 var moneyCurrent = setInterval(changeMoney, 100);
 var nameLimitere = setInterval(nameLimiter, 10);
