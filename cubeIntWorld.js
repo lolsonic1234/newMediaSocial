@@ -1,4 +1,4 @@
-console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this!")
+console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this!");
 
 var moneyFUN = setInterval(dynamicCollected, 1000);
 var moneyCurrent = setInterval(changeMoney, 100);
@@ -25,6 +25,7 @@ var fBought = readCookie('firstBought');
 var sBought = readCookie('secondBought');
 var tBought = readCookie('thirdBought');
 var foBought = readCookie('fourthBought');
+var fiBought = readCookie('fifthBought');
 
 var cubeColor = readCookie('cubeColor');
 
@@ -86,6 +87,7 @@ $(".buyCubeLimit").click(function(){
     
     
     if(parseInt($(".maxCubeinput").val()) !== 0 && chaCHING >= thirdBase){
+        alert(thirdBase);
         maxCube += parseInt($(".maxCubeinput").val());
         chaCHING -= thirdBase;
     }
@@ -110,6 +112,7 @@ $(".resetti").click(function(){
     document.cookie = "secondBought=0";
     document.cookie = "thirdBought=0";
     document.cookie = "fourthBought=0";
+    document.cookie = "fifthBought=0";
     document.cookie = "stageLevel=1";
     chaCHING = readCookie('cash');
     cubeSpawnSpeed = readCookie('cubespawnin');
@@ -121,6 +124,7 @@ $(".resetti").click(function(){
     sBought = readCookie('secondBought');
     tBought = readCookie('thirdBought');
     foBought = readCookie('fourthBought');
+    fiBought = readCookie('fifthBought');
     level = readCookie('stageLevel');
     cubeSpawnSpeed -= 1000;
     cubeSpawnSpeed += 1000;
@@ -138,6 +142,8 @@ $(".resetti").click(function(){
     tBought += 1;
     foBought -= 1;
     foBought += 1;
+    fiBought -= 1;
+    fiBought += 1;
     maxCube -= 1;
     maxCube += 1;
     
@@ -160,6 +166,7 @@ if(readCookie('firstTime') > 1){
     sBought = readCookie('secondBought');
     tBought = readCookie('thirdBought');
     foBought = readCookie('fourthBought');
+    fiBought = readCookie('fifthBought');
     level -= 1;
     level += 1;
     cubeSpawnSpeed -= 1000;
@@ -176,6 +183,8 @@ if(readCookie('firstTime') > 1){
     tBought += 1;
     foBought -= 1;
     foBought += 1;
+    fiBought -= 1;
+    fiBought += 1;
     maxCube -= 1;
     maxCube += 1;
     spawningCube = setInterval(spawnNormalCube, cubeSpawnSpeed);
@@ -193,6 +202,7 @@ function autoSave(){
     document.cookie = "secondBought=" + sBought;
     document.cookie = "thirdBought=" + tBought;
     document.cookie = "fourthBought=" + foBought;
+    document.cookie = "fifthBought=" + fiBought;
     if(readCookie("firstBought") == 1){
         document.cookie = "cubeSkinBought=2";
     };
@@ -204,6 +214,9 @@ function autoSave(){
     };
     if(readCookie("fourthBought") == 1){
         document.cookie = "cubeSkinBought=5";
+    };
+    if(readCookie("fifthBought") == 1){
+        document.cookie = "cubeSkinBought=6";
     };
 }
 
@@ -224,6 +237,7 @@ if(readCookie('firstTime') < 1){
     document.cookie = "secondBought=0";
     document.cookie = "thirdBought=0";
     document.cookie = "fourthBought=0";
+    document.cookie = "fifthBought=0";
     document.cookie = "stageLevel=1";
     chaCHING = readCookie('cash');
     cubeSpawnSpeed = readCookie('cubespawnin');
@@ -235,6 +249,7 @@ if(readCookie('firstTime') < 1){
     sBought = readCookie('secondBought');
     tBought = readCookie('thirdBought');
     foBought = readCookie('fourthBought');
+    fiBought = readCookie('fourthBought');
     level = readCookie('stageLevel');
     cubeSpawnSpeed -= 1000;
     cubeSpawnSpeed += 1000;
@@ -252,13 +267,15 @@ if(readCookie('firstTime') < 1){
     tBought += 1;
     foBought -= 1;
     foBought += 1;
+    fiBought -= 1;
+    fiBought += 1;
     maxCube -= 1;
     maxCube += 1;
     currentCube = 0;
 };
 
 $('.submitName').click(function(){
-    if($('.inputName').val().length > 2 && $('.inputName').val().toLowerCase() !== "novicedeerk" && $('.inputName').val().toLowerCase() !== "kagedark" && $('.inputName').val().toLowerCase() !== "klasner" && $('.inputName').val().toLowerCase() !== "anthony" && $('.inputName').val().toLowerCase() !== "klasbarian" && $('.inputName').val().toLowerCase() !== "aaaaaaaaaaaa" && $('.inputName').val().toLowerCase() !== "maiapapaya"){
+    if($('.inputName').val().length > 2 && $('.inputName').val().toLowerCase() !== "novicedeerk" && $('.inputName').val().toLowerCase() !== "kagedark" && $('.inputName').val().toLowerCase() !== "klasner" && $('.inputName').val().toLowerCase() !== "anthony" && $('.inputName').val().toLowerCase() !== "klasbarian" && $('.inputName').val().toLowerCase() !== "aaaaaaaaaaaa"){
         $('.firstTimePlaying').css({
             zIndex: "-1",
             opacity: "0"
@@ -296,10 +313,6 @@ $('.submitName').click(function(){
     
     if($('.inputName').val().toLowerCase() == "bbbbbbbbbbbb"){
         alert("-Siiiiiigh....- Fine...");
-    };
-    
-    if($('.inputName').val().toLowerCase() == "maiapapaya"){
-        alert("Mm mm papayas!");
     };
 });
 
@@ -369,6 +382,21 @@ function reloadEverything(){
                 zIndex: "0"
             });
             $(".itemInfo5").css({
+                transition: "opacity 1s",
+                opacity: "1",
+                zIndex: "0"
+            });
+        }
+        
+        if(fiBought == 1){
+            $('.storeItem5').css("background-color", "red");
+            $('.itemInfo5').html("BOUGHT");
+            $(".storeItem6").css({
+                transition: "opacity 1s",
+                opacity: "1",
+                zIndex: "0"
+            });
+            $(".itemInfo6").css({
                 transition: "opacity 1s",
                 opacity: "1",
                 zIndex: "0"
@@ -506,6 +534,43 @@ $('.storeItem4').click(function(){
             zIndex: "0"
         });
     }else if(chaCHING < 1000 && foBought == 0){
+        $('.notEnough').css({
+            opacity: ".9",
+            zIndex: "9"
+        });
+        
+        window.setTimeout(function(){
+            $('.notEnough').css({
+                opacity: "0"
+            });
+        }, 1500)
+        
+        window.setTimeout(function(){
+            $('.notEnough').css({
+                zIndex: "-1"
+            });
+        }, 2500)
+    };
+});
+
+$('.storeItem5').click(function(){
+    if(chaCHING >= 3000 && fiBought == 0){
+        cubesBought += 1;
+        chaCHING -= 3000;
+        fiBought += 1;
+        $(this).css("background-color", "red");
+        $('.itemInfo5').html("BOUGHT");
+        $(".storeItem6").css({
+            transition: "opacity 1s",
+            opacity: "1",
+            zIndex: "0"
+        });
+        $(".itemInfo6").css({
+            transition: "opacity 1s",
+            opacity: "1",
+            zIndex: "0"
+        });
+    }else if(chaCHING < 3000 && fiBought == 0){
         $('.notEnough').css({
             opacity: ".9",
             zIndex: "9"
@@ -688,10 +753,37 @@ $(document).on('mouseenter', '.musDiv', function(e) {
     
 });
 
+$(document).on('mouseenter', '.mdDiv', function(e) {
+    
+    
+    hold = this;
+    $(hold).removeClass("mdDiv");
+    chaCHING += 100;
+    currentCube -= 1;
+    $(hold).css({
+        transition: "transform 1s, margin-top 1.5s, margin-left 1.5s",
+        transform: "rotate(0deg)",
+        marginTop: "30vw",
+        marginLeft: "1.5vw",
+        zIndex: "3"
+    });
+    
+    $(".fancyNumSe").css({
+        transition: "transform 1s, height .5s, width .5s",
+        height: "5.3vw",
+        width: "5.3vw"
+    });
+    
+    animCubeMd(hold);
+    
+});
+
 $('.colorChanger').click(function(){
      cubeColor = $(this).css("background-color");
      $('.cubeSpawnLocation #moneyMake').css("background-color", $(this).css("background-color"));
      $(".fancyNumSe").css("background-color", $(this).css("background-color"))
+     
+     
 })
 
 function animCubeMus(kill){
@@ -834,6 +926,110 @@ function animCube(kill){
     }, 1000)
 }
 
+function animCubeMd(kill){
+    window.setTimeout(function(){
+        $(".fancyNumSe").css({
+            transition: "transform 1s, height .5s, width .5s",
+            height: "4.5vw",
+            width: "4.5vw"
+        });
+    }, 500);
+    
+    window.setTimeout(function(){
+        $(".dorrito1").css({
+            opacity: "1",
+            marginTop: "39vw"
+        });
+    }, 500);
+    
+    window.setTimeout(function(){
+        $(".dorrito1").css({
+            opacity: "0",
+            marginTop: "43vw"
+        });
+        
+        $(kill).css({
+            marginLeft: "9.5vw"
+        })
+    }, 1500);
+    
+    window.setTimeout(function(){
+        $(".dorrito2").css({
+            opacity: "1",
+            marginTop: "39vw"
+        });
+    }, 2000);
+    
+    window.setTimeout(function(){
+        $(".dorrito2").css({
+            opacity: "0",
+            marginTop: "43vw"
+        });
+        
+        $(kill).css({
+            marginLeft: "17.5vw"
+        })
+    }, 3000);
+    
+    window.setTimeout(function(){
+        $(".dorrito3").css({
+            opacity: "1",
+            marginTop: "39vw"
+        });
+    }, 3500);
+    
+    window.setTimeout(function(){
+        $(".dorrito3").css({
+            opacity: "0",
+            marginTop: "43vw"
+        });
+        
+        $(kill).css({
+            marginLeft: "25.5vw"
+        })
+    }, 4500);
+    
+    window.setTimeout(function(){
+        $(".dorrito4").css({
+            opacity: "1",
+            marginTop: "39vw"
+        });
+    }, 5000);
+    
+    window.setTimeout(function(){
+        $(".dorrito4").css({
+            opacity: "0",
+            marginTop: "43vw"
+        });
+        
+        $(kill).css({
+            marginLeft: "33.5vw"
+        })
+    }, 6000);
+    
+    window.setTimeout(function(){
+        $(".dorrito5").css({
+            opacity: "1",
+            marginTop: "39vw"
+        });
+    }, 6500);
+    
+    window.setTimeout(function(){
+        $(".dorrito5").css({
+            opacity: "0",
+            marginTop: "43vw"
+        });
+        
+        $(kill).css({
+            marginLeft: "120vw"
+        })
+    }, 7500);
+    
+    window.setTimeout(function(){
+        $(kill).remove();
+    }, 8000)
+}
+
 
 
 function spawnNormalCube(){
@@ -865,6 +1061,11 @@ function spawnNormalCube(){
         
         if(randomCube == 5){
             $(".cubeSpawnLocation").append('<img class="musDiv" id="moneyMake" style="background-color: ' + cubeColor + '; width: 4vw; height: 4vw; margin-left: ' + randomX + '%; margin-top: ' + randomY + '%; position: absolute; transform: rotate(' + randomDegree + 'deg)" src="http://i.imgur.com/I1qZd7t.png">');
+            currentCube += 1;
+        };
+        
+        if(randomCube == 6){
+            $(".cubeSpawnLocation").append('<img class="mdDiv" id="moneyMake" style="background-color: ' + cubeColor + '; width: 4vw; height: 4vw; margin-left: ' + randomX + '%; margin-top: ' + randomY + '%; position: absolute; transform: rotate(' + randomDegree + 'deg)" src="http://i.imgur.com/cIcndBV.png">');
             currentCube += 1;
         };
     };
