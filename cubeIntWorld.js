@@ -1,4 +1,4 @@
-console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this!");
+console.log("I suggest you leave this console control room. However if you are here looking to contact me and not to hack this game, contact me via skype. anthony.daluz1 is my skype. Only contact me if you wish to learn how to make stuff like this oooor you are planning to hire me. That works too!");
 
 var moneyFUN = setInterval(dynamicCollected, 1000);
 var moneyCurrent = setInterval(changeMoney, 100);
@@ -631,6 +631,33 @@ function changeMoney(){
 
 
 $(document).on('mouseenter', '.cubeDiv', function(e) {
+    
+    
+    hold = this;
+    $(hold).removeClass("cubeDiv");
+    chaCHING += 1
+    currentCube -= 1;
+    
+    $(hold).css({
+        transition: "transform 1s, height 1s, width 1s",
+        transform: "rotate(1080deg)",
+        height: "0px",
+        width: "0px"
+    });
+    
+    $(".fancyNumSe").css({
+        transition: "transform 1s, height .5s, width .5s",
+        height: "5.3vw",
+        width: "5.3vw"
+    });
+    
+    animCube(this)
+
+});
+
+
+
+$(document).on('tap', 'a', function () {
     
     
     hold = this;
