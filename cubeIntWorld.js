@@ -275,7 +275,7 @@ if(readCookie('firstTime') < 1){
 };
 
 $('.submitName').click(function(){
-    if($('.inputName').val().length > 2 && $('.inputName').val().toLowerCase() !== "novicedeerk" && $('.inputName').val().toLowerCase() !== "kagedark" && $('.inputName').val().toLowerCase() !== "klasner" && $('.inputName').val().toLowerCase() !== "anthony" && $('.inputName').val().toLowerCase() !== "klasbarian" && $('.inputName').val().toLowerCase() !== "aaaaaaaaaaaa"){
+    if($('.inputName').val().length > 2 && $('.inputName').val().toLowerCase() !== "novicedeerk" && $('.inputName').val().toLowerCase() !== "klasner" && $('.inputName').val().toLowerCase() !== "anthony" && $('.inputName').val().toLowerCase() !== "klasbarian" && $('.inputName').val().toLowerCase() !== "aaaaaaaaaaaa"){
         $('.firstTimePlaying').css({
             zIndex: "-1",
             opacity: "0"
@@ -286,9 +286,6 @@ $('.submitName').click(function(){
         $('.name').html(readCookie("userName"));
         spawningCube = setInterval(spawnNormalCube, cubeSpawnSpeed);
         autoSaver = setInterval(autoSave, 10);
-    };
-    if($('.inputName').val().toLowerCase() == "kagedark"){
-        alert("That username belongs to my owner!");
     };
     
     if($('.inputName').val().toLowerCase() == "novicedeerk"){
